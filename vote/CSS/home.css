@@ -160,3 +160,12 @@
 .relative-p{
     position: relative;
 }
+.active-tab{
+    color: blue;
+}
+.clicked{
+    color: red;
+}
+.fa-heart{
+    font-size: 1.4rem;
+}
