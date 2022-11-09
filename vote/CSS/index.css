@@ -1,0 +1,39 @@
+html,
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.index-screen{
+    text-align: center;
+    padding: 0.5rem;
+}
+.index-screen h3{
+    font-size: x-large;
+    color: blue;
+}
+#ballot-box img{
+    animation: ballot 4s ease-in-out infinite;
+}
+.index-screen article{
+    font-size: larger;
+    font-weight: 600;
+}
+.index-screen button{
+    width: 80%;
+    background-color: blue;
+    color: white;
+    border: 0;
+    padding: 0.5rem;
+    font-size: large;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+}
+@keyframes ballot {
+    from {
+        transform: rotateY(0);
+    } to {
+        transform: rotateY(360deg);
+    }
+}
