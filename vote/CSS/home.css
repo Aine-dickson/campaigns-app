@@ -95,4 +95,68 @@
 }
 .posts article{
     font-size: large;
+    display: flex;
+    flex-direction: column;
+}
+.poster{
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.poster div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+.poster-user-name{
+    font-size: medium;
+    font-style: italic;
+    color: gray;
+}
+.profile-pic{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.1rem solid gray;
+    outline: 0.1rem blue solid;
+    outline-offset: 0.2rem;
+    margin-right: 1rem;
+}
+.article-desc{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+.article-photo .image{
+    height: 12rem;
+    width: 90%;
+    margin: 0.3rem 1rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+}
+.posts .reactions{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.2rem;
+}
+.posts .reactions > span{
+    height: 1.4rem;
+}
+.alert{
+    background-color: red;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 0.2rem;
+}
+.hidden{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.relative-p{
+    position: relative;
 }

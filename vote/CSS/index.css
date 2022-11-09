@@ -5,6 +5,11 @@ body{
     padding: 0;
     height: 100%;
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 .index-screen{
     text-align: center;
     padding: 0.5rem;
@@ -28,7 +33,13 @@ body{
     padding: 0.5rem;
     font-size: large;
     border-radius: 0.4rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+}
+hr{
+    width: 100%;
+}
+.hidden{
+    display: none;
 }
 @keyframes ballot {
     from {
