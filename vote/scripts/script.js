@@ -41,6 +41,9 @@ $(document).ready(() => {
                 $(".overall-container").html(data)
                 homeManager()
                 $("#home-base").click()
+                $("#profile").click(() => {
+                    $(".home-header").toggleClass("hidden")
+                })
             }
         );
     })
@@ -65,6 +68,11 @@ function homeManager(){
                 if($(item).hasClass("active-tab")){
                     $(item).removeClass("active-tab");
                 }
+                if(id != "profile"){
+                    if($(".home-header").hasClass("hidden")){
+                        $(".home-header").removeClass("hidden")
+                    }
+                }
             })
             $(element).addClass("active-tab");
             $.get(`../pages/${id}.html`,
@@ -85,6 +93,7 @@ function homeManager(){
                         $(".home-header").toggleClass("hidden")
                         $(".home-footer").toggleClass("hidden")
                     })
+                    $("#profle-name").html(createdAccounts[0].name)
                 }
             )
         })
