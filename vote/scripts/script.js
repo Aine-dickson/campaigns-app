@@ -1,9 +1,40 @@
 // State management variables
 let id = 0;
+let userName;
+let userEmail;
 
 let createdAccounts = []
 
 $(document).ready(() => {
+    $(".login-page form").submit((e) => {
+        e.preventDefault()
+        error_alert(".login-page fieldset > span")
+        if ($(".login-page #name").val() == "") {
+            $(".login-page #name").focus()
+            $("#name-msg").toggleClass("hidden")
+        } else if($(".login-page #email").val() == ""){
+            $(".login-page #email").focus()
+            $("#email-msg").toggleClass("hidden")
+        } else if($(".login-page #password").val() == ""){
+            $(".login-page #password").focus()
+            $("#pass-msg").toggleClass("hidden")
+        } else {
+            error_alert(".login-page fieldset > span")
+            userName = $(".login-page #name").val()
+            userEmail = $(".login-page #email").val()
+            let accName = "@" + userName
+            new AccountOwner(accName, userName)
+            $(".login-page input").each((index, field) => {
+                $(field).val("")
+            })
+            $(".login-page").toggleClass("hidden")
+            $(".index-screen > section").toggleClass("hidden")
+            $(".index-screen > section > article").prepend(
+                '<p><marquee behavior="alternate" direction="">Your Vote Your Voice</marquee></p>'
+            );
+            return true
+        }
+    })
     $("#index-btn").click(() =>{
         $.get("./pages/home.html",
             function (data, textStatus, jqXHR) {
@@ -68,11 +99,11 @@ class AccountOwner{
         this.accCreator()
     }
     accCreator(objectName){
-        objectName = this.acc_name
+        objectName = this.user_name
         objectName = {
             name: this.acc_name,
             age: 0,
-            nationality: "Nigerian",
+            nationality: "",
         }
         createdAccounts.push(objectName)
     }
@@ -94,6 +125,10 @@ class AccountOwner{
     }
 }
 
-let acc2 = new AccountOwner("Di Octopus", "@octopus")
-let acc1 = new AccountOwner("Aine", "@ainedeveloper")
-console.log(createdAccounts)
+function error_alert(alert){
+    $(alert).each((index, alert_msg) => {
+        if (!$(alert_msg).hasClass("hidden")) {
+            $(alert_msg).addClass("hidden")
+        }
+    })
+}

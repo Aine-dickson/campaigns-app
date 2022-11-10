@@ -41,6 +41,36 @@ hr{
 .hidden{
     display: none;
 }
+.login-page > span{
+    color: green;
+    font-size: medium;
+    font-style: italic;
+    font-family: Aclonica;
+}
+.login-page form{
+    font-size: x-large;
+    margin-top: 1.5rem;
+}
+fieldset{
+    border: 0;
+    position: relative;
+}
+fieldset > span{
+    color: red;
+    font-size: medium;
+}
+.login-page input,
+.login-page input:focus{
+    border: 0;
+    font-size: large;
+    outline: none;
+    box-shadow: inset 0 0 0.5rem blue;
+    padding: 0.4rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+}
+
+
 @keyframes ballot {
     from {
         transform: rotateY(0);
