@@ -1,0 +1,102 @@
+.setting{
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.setting span:first-child{
+    margin-left: 1rem;
+}
+.setting > div{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bold;
+    align-items: baseline;
+}
+.setting > div span:last-child{
+    font-size: 0.9rem;
+    color: gray;
+    font-style: italic;
+}
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem;
+    font-size: larger;
+    font-weight: 600;
+}
+.brand span:last-child{
+    font-style: italic;
+    color: gray;
+}
+.settings-flash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+}
+.flash-header{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: x-large;
+    font-weight: bold;
+    color: blue;
+}
+.flash-main{
+    margin-top: 0.5rem;
+}
+.flash-main .profile-image{
+    height: 8rem;
+    width: 10rem;
+    overflow: hidden;
+    border-radius: 40%;
+    margin: auto;
+}
+.flash-main .camera{
+    font-size: x-large;
+    position: absolute;
+    color: rgb(35, 201, 35);
+    top: 8.5rem;
+    right: 5.5rem;
+    background-color: blue;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.edit{
+    display: flex;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+.edit i{
+    font-size: x-large;
+}
+.edit > div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    width: 100%;
+}
+.edit article{
+    display: flex;
+    flex-direction: column;
+}
+.edit article span:first-child{
+    font-size: x-large;
+    color: gray;
+}
+.pre-caution{
+    font-size: 0.9rem;
+    font-style: italic;
+}
+.prev{
+    font-weight: bolder;
+}

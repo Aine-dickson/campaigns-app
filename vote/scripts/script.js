@@ -43,7 +43,16 @@ function homeManager(){
                         $(reaction).click(() => {
                             $(reaction).toggleClass("clicked")
                         })
-
+                    })
+                    $(".profile").click(() => {
+                        $(".settings-flash").toggleClass("hidden")
+                        $(".home-header").toggleClass("hidden")
+                        $(".home-footer").toggleClass("hidden")
+                    })
+                    $(".settings-flash .fa-chevron-left").click(() => {
+                        $(".settings-flash").toggleClass("hidden")
+                        $(".home-header").toggleClass("hidden")
+                        $(".home-footer").toggleClass("hidden")
                     })
                 }
             )
