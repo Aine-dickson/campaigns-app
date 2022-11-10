@@ -1,3 +1,215 @@
-<div class="candidates-screen">
-    <h3>Settings loading...</h3>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../CSS/css/all.css">
+    <style>
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+        }
+        .setting{
+            display: flex;
+            align-items: center;
+            font-size: x-large;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .setting span:first-child{
+            margin-left: 1rem;
+        }
+        .setting > div{
+            display: flex;
+            flex-direction: column;
+            font-size: large;
+            font-weight: bold;
+            align-items: baseline;
+        }
+        .setting > div span:last-child{
+            font-size: 0.9rem;
+            color: gray;
+            font-style: italic;
+        }
+        .brand{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5rem;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .brand span:last-child{
+            font-style: italic;
+            color: gray;
+        }
+        .settings-flash{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: white;
+            z-index: 20;
+        }
+        .flash-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        .flash-main{
+            margin-top: 0.5rem;
+        }
+        .flash-main .profile-image{
+            height: 8rem;
+            width: 10rem;
+            overflow: hidden;
+            border-radius: 40%;
+            margin: auto;
+        }
+        .flash-main .camera{
+            font-size: x-large;
+            position: absolute;
+            color: rgb(35, 201, 35);
+            top: 8.5rem;
+            right: 5.5rem;
+            background-color: blue;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        .edit{
+            display: flex;
+            margin: 0 1rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+        .edit i{
+            font-size: x-large;
+        }
+        .edit > div{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            width: 100%;
+        }
+        .edit article{
+            display: flex;
+            flex-direction: column;
+        }
+        .edit article span:first-child{
+            font-size: x-large;
+            color: gray;
+        }
+        .pre-caution{
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-screen">
+        <div class="settings-flash">
+            <header class="flash-header">
+                <span><i class="fas fa-chevron-left"></i></span>
+                <span>Profile Settings</span>
+                <span></span>
+            </header>
+            <main class="flash-main">
+                <div class="profile-image relative">
+                    <img src="../Tools/ainedev.jpg" alt="">
+                    <span class="camera"><i class="fas fa-camera"></i></span>
+                </div>
+                <div class="edit" id="profile-name">
+                    <span><i class="fas fa-user"></i></span>
+                    <div>
+                        <article>
+                            <span>Name</span>
+                            <span class="prev"></span>
+                            <span class="pre-caution">This is not your biological name or pin. It will be visible to your network.</span>
+                        </article>
+                        <span><i class="fas fa-pencil"></i></span>
+                    </div>
+                </div>
+                <div class="edit" id="about">
+                    <span><i class="fas fa-info-circle"></i></span>
+                    <div>
+                        <article>
+                            <span>About</span>
+                            <span class="prev"></span>
+                        </article>
+                        <span><i class="fas fa-pencil"></i></span>
+                    </div>
+                </div>
+                <div class="edit" id="phone">
+                    <span><i class="fas fa-phone"></i></span>
+                    <div>
+                        <article>
+                            <span>Phone</span>
+                            <span class="prev"></span>
+                        </article>
+                        <span><i class="fas fa-pencil"></i></span>
+                    </div>
+                </div>
+                <div class="edit" id="site">
+                    <span><i class="fab fa-internet-explorer"></i></span>
+                    <div>
+                        <article>
+                            <span>Web-site</span>
+                            <span class="prev"></span>
+                        </article>
+                        <span><i class="fas fa-pencil"></i></span>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="setting profile">
+            <span><i class="fa-solid fa-pencil"></i></span>
+            <div>
+                <span>Edit profile</span>
+                <span>Name, dp, contacts</span>
+            </div>
+        </div>
+        <hr>
+        <div class="setting profile">
+            <span><i class="fa-regular fa-message"></i></span>
+            <div>
+                <span>Chats</span>
+                <span>Themes, wallpapers</span>
+            </div>
+        </div>
+        <hr>
+        <div class="setting profile">
+            <span><i class="fa-regular fa-bell"></i></span>
+            <div>
+                <span>Notifications</span>
+                <span>Message, groups, tunes</span>
+            </div>
+        </div>
+        <hr>
+        <div class="setting profile">
+            <span><i class="fas fa-clipboard-question"></i></span>
+            <div>
+                <span>Help</span>
+                <span>Help center, contact us, terms & conditions</span>
+            </div>
+        </div>
+        <hr>
+        <div class="setting profile">
+            <span><i class="fas fa-users"></i></span>
+            <div>
+                <span>Invite friend</span>
+                <span></span>
+            </div>
+        </div>
+        <article class="brand">
+            <span>By</span>
+            <span>@ainedeveloper di Octopus</span>
+        </article>
+    </div>
+</body>
+</html>

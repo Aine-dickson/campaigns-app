@@ -1,3 +1,8 @@
+// State management variables
+let id = 0;
+
+let createdAccounts = []
+
 $(document).ready(() => {
     $("#index-btn").click(() =>{
         $.get("./pages/home.html",
@@ -45,3 +50,41 @@ function homeManager(){
         })
     })
 }
+
+class AccountOwner{
+    constructor(acc_name, user_name){
+        this.id = id;
+        this.acc_name = acc_name;
+        this.user_name = user_name;
+        this.accCreator()
+    }
+    accCreator(objectName){
+        objectName = this.acc_name
+        objectName = {
+            name: this.acc_name,
+            age: 0,
+            nationality: "Nigerian",
+        }
+        createdAccounts.push(objectName)
+    }
+    postHandler(){
+        let images = {
+            posted_images: [],
+            profile_images: [],
+            status_images: []
+        }
+    }
+    logingManager(){
+
+    }
+    profileManager(){
+
+    }
+    acc_activityManagement(){
+
+    }
+}
+
+let acc2 = new AccountOwner("Di Octopus", "@octopus")
+let acc1 = new AccountOwner("Aine", "@ainedeveloper")
+console.log(createdAccounts)
