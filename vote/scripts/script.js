@@ -93,7 +93,7 @@ function homeManager(){
                 $(".overlay").removeClass("hidden")
             })
         })
-    }, 100)
+    }, 500)
 
     // Menu tab functionality
     $("#menu").click(() => {
