@@ -8,50 +8,59 @@
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <link rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="./CSS/profile.css">
     <link rel="stylesheet" href="./CSS/settings.css">
     <link rel="stylesheet" href="./CSS/css/all.css">
 </head>
 <body>
-    <div class="overall-container">
-        <div class="index-screen">
-            <div class="login-page">
-                <h3>Sign Up</h3>
-                <span>E-vote is intresting with account</span>
-                <form>
-                    <fieldset class="name">
-                        <div>
-                            <label for="name"><i class="fas fa-user"></i></label>
-                            <input type="text" id="name" placeholder="User name">
-                        </div>
-                        <span id="name-msg" class="hidden">Please enter your name!</span>
-                    </fieldset>
-                    <fieldset class="email">
-                        <div>
-                            <label for="email"><i class="fas fa-envelope"></i></label>
-                            <input type="email" id="email" placeholder="Enter a valid email">
-                        </div>
-                        <span id="email-msg" class="hidden">Please enter a valid email!</span>
-                    </fieldset>
-                    <fieldset class="password">
-                        <div>
-                            <label for="password"><i class="fas fa-lock"></i></label>
-                            <input type="password" id="password" placeholder="Type a password">
-                        </div>
-                        <span id="pass-msg" class="hidden">Please enter a password!</span>
-                    </fieldset>
-                    <button type="submit" id="login-btn">SEND</button>
-                </form>
-            </div>
-            <section class="hidden">
-                <h3>Welcome To e-vote</h3>
-                <div id="ballot-box">
-                    <img src="./Tools/images.png" alt="ballot-box">
+    <div class="full-container">
+        <div class="overlay hidden">
+            <span class="hidden">
+                <i class="fas fa-close"></i>
+            </span>
+            <div class="light-image"></div>
+        </div>
+        <div class="overall-container">
+            <div class="index-screen">
+                <div class="login-page">
+                    <h3>Sign Up</h3>
+                    <span>E-vote is intresting with account</span>
+                    <form>
+                        <fieldset class="name">
+                            <div>
+                                <label for="name"><i class="fas fa-user"></i></label>
+                                <input type="text" id="name" placeholder="User name">
+                            </div>
+                            <span id="name-msg" class="hidden">Please enter your name!</span>
+                        </fieldset>
+                        <fieldset class="email">
+                            <div>
+                                <label for="email"><i class="fas fa-envelope"></i></label>
+                                <input type="email" id="email" placeholder="Enter a valid email">
+                            </div>
+                            <span id="email-msg" class="hidden">Please enter a valid email!</span>
+                        </fieldset>
+                        <fieldset class="password">
+                            <div>
+                                <label for="password"><i class="fas fa-lock"></i></label>
+                                <input type="password" id="password" placeholder="Type a password">
+                            </div>
+                            <span id="pass-msg" class="hidden">Please enter a password!</span>
+                        </fieldset>
+                        <button type="submit" id="login-btn">SEND</button>
+                    </form>
                 </div>
-                <article>
-                    <span>Feel proud to be a voter. Be ready to vote</span>
-                </article>
-                <button id="index-btn">Continue to vote</button>
-            </section>
+                <section class="hidden">
+                    <h3>Welcome To e-vote</h3>
+                    <div id="ballot-box">
+                        <img src="./Tools/images.png" alt="ballot-box">
+                    </div>
+                    <article>
+                        <span>Feel proud to be a voter. Be ready to vote</span>
+                    </article>
+                    <button id="index-btn">Continue to vote</button>
+                </section>
+            </div>
         </div>
     </div>
     <script src="./scripts/jquery-3.6.1.js"></script>
