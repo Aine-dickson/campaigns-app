@@ -25,10 +25,11 @@ $(document).ready(() => {
             error_alert(".login-page fieldset > span")
             userEmail = $(".login-page #email").val()
             let userName = $(".login-page #name").val()
+            let initialising = $(".login-page #name").val().split("")
             let space = userName.split("")
-            let first_initial = space.splice(0, 1); let second_initial;
+            let first_initial = initialising.splice(0, 1); let second_initial;
             if(userName.split("").includes(" ")){
-                second_initial = space.splice(space.indexOf(" ")+1, 1)
+                second_initial = initialising.splice(space.indexOf(" "), 1)
                 space.splice(space.indexOf(" "), 1, '-')
                 accName = ("@" + space.join("")).toLowerCase()
             } else {
